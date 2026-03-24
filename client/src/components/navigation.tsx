@@ -43,17 +43,11 @@ export default function Navigation() {
             >
               Features
             </button>
-            <button 
+            <button
               onClick={() => scrollToSection("testimonials")}
               className="text-dark-grey hover:text-lavender transition-colors duration-300"
             >
-              Stories
-            </button>
-            <button 
-              onClick={() => scrollToSection("download")}
-              className="text-dark-grey hover:text-lavender transition-colors duration-300"
-            >
-              Download
+              Our Story
             </button>
             <Button
               asChild
@@ -88,17 +82,11 @@ export default function Navigation() {
               >
                 Features
               </button>
-              <button 
+              <button
                 onClick={() => scrollToSection("testimonials")}
                 className="block px-3 py-2 text-dark-grey hover:text-lavender transition-colors duration-300"
               >
-                Stories
-              </button>
-              <button 
-                onClick={() => scrollToSection("download")}
-                className="block px-3 py-2 text-dark-grey hover:text-lavender transition-colors duration-300"
-              >
-                Download
+                Our Story
               </button>
               <Button
                 asChild
