@@ -3,13 +3,6 @@ import { Play, Star, Heart } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function HeroSection() {
-  const scrollToWaitlist = () => {
-    const element = document.getElementById("waitlist");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-beige/30 to-white pt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -30,11 +23,13 @@ export default function HeroSection() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
-              <Button 
-                onClick={scrollToWaitlist}
+              <Button
+                asChild
                 className="bg-black text-white px-8 py-4 rounded-full font-medium hover:bg-dark-grey transition-all duration-300 transform hover:scale-105"
               >
-                Join the Waitlist
+                <a href="https://form.typeform.com/to/NbcWkEYN" target="_blank" rel="noopener noreferrer">
+                  Join the Waitlist
+                </a>
               </Button>
               <Button 
                 variant="outline"

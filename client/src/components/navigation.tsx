@@ -23,14 +23,6 @@ export default function Navigation() {
     setIsMenuOpen(false);
   };
 
-  const scrollToWaitlist = () => {
-    const element = document.getElementById("waitlist");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-    setIsMenuOpen(false);
-  };
-
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
       isScrolled ? "bg-white/95 backdrop-blur-md border-b border-gray-100" : "bg-white/95 backdrop-blur-md"
@@ -63,11 +55,13 @@ export default function Navigation() {
             >
               Download
             </button>
-            <Button 
-              onClick={scrollToWaitlist}
+            <Button
+              asChild
               className="bg-black text-white px-6 py-2 rounded-full hover:bg-dark-grey transition-colors duration-300"
             >
-              Join Waitlist
+              <a href="https://form.typeform.com/to/NbcWkEYN" target="_blank" rel="noopener noreferrer">
+                Join Waitlist
+              </a>
             </Button>
           </div>
           
@@ -106,11 +100,13 @@ export default function Navigation() {
               >
                 Download
               </button>
-              <Button 
-                onClick={scrollToWaitlist}
+              <Button
+                asChild
                 className="w-full mt-4 bg-black text-white hover:bg-dark-grey"
               >
-                Join Waitlist
+                <a href="https://form.typeform.com/to/NbcWkEYN" target="_blank" rel="noopener noreferrer">
+                  Join Waitlist
+                </a>
               </Button>
             </div>
           </div>
